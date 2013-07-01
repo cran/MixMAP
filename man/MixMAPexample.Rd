@@ -28,12 +28,12 @@ Gene: A character with gene symbol
 This file contains all of the information needed to run the MixMAP function directly.   
 }
 \source{
-The p-values in this file are from the 2010 paper Teslovich Et Al.  ``Biological, clinical and population relevance of 95 loci for blood lipids" in Nature where the 
+The p-values in this file are from the paper Teslovich Et Al. (2009) "Biological, clinical and population relevance of 95 loci for blood lipids" Nature 466: 707-713.  The 
  phenotype of interest was low-density lipoprotein (LDL) cholesterol.  The SNPs chosen are a subset that are found in the IBC array and have a unique gene name associated with them.  
 }
 
 \references{
-Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  ``Mixed modeling of Meta-Analysis P-values (MixMAP) suggests multiple novel gene loci for low density lipoprotein cholesterol." Under Review; Available upon request. %%PLOS one.  
+Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) "Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812.
 
 }
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -46,7 +46,8 @@ library(MixMAP)
 data(MixMAP_example)
 str(MixMAP_example)
 #Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",chr="Chr",bp="Coordinate",gene="Gene",use.post.var=TRUE)
+MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+  chr="Chr",coord="Coordinate",gene="Gene")
 #Display first ten detected genes
 summary(MixOut)
 #MixManhattan Plot

@@ -9,7 +9,9 @@ Plot
 The purpose of plot is to graphically display the results of MixMAP in a similar way as a Manhattan plot that is used for Genome Wide Association Studies.    
 }
 \usage{
-\S4method{plot}{MixMAP}(mixmap.object,col.genes=c("black","gray"),col.detected=c("blue","violet"),col.text="black",main="MixMAP Manhattan Plot",display.text=TRUE)
+\S4method{plot}{MixMAP}(mixmap.object,col.genes=c("black","gray"),
+  col.detected=c("blue","violet"),col.text="black",
+    main="MixMAP Manhattan Plot",display.text=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -39,7 +41,7 @@ Since MixMAP searches for genes with small empirical Bayes estimates, the result
 Returns a MixManhattan plot.
 }
 \references{
-Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  ``Mixed modeling of Meta-Analysis P-values (MixMAP) suggests multiple novel gene loci for low density lipoprotein cholesterol."" Under Review; Available upon requet.  
+Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) ``Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812.   
 }
 \author{
 Gregory J. Matthews
@@ -47,7 +49,9 @@ Gregory J. Matthews
 
 \examples{
 data(MixMAP_example)
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",chr="Chr",bp="Coordinate",gene="Gene",use.post.var=TRUE)
+#Run MixMAP
+MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName"
+  ,chr="Chr",coord="Coordinate",gene="Gene")
 plot(MixOut)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

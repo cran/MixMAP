@@ -17,7 +17,7 @@ A data.frame containing posterior estimates for all genes, as well as other asso
 A numeric vector containing the number of genes detected and the total number of genes.    
 }
   \item{detected.genes}{
-A data.frame containing information on the detected genes.  This includes the posterior estimate, variance, and upper bound of the prediction interval fo all genes.  Other gene level information that is included is the gene location including chromosome and base pair along with the total number of SNPs within each gene (SNP.COUNT), and some summary information regarding the SNP p-values within each gene.  
+A data.frame containing information on the detected genes.  This includes the posterior estimate, variance, and upper bound of the prediction interval fo all genes.  Other gene level information that is included is the gene location including chromosome and base pair along with the total number of SNPs within each gene (snpCount), and some summary information regarding the SNP p-values within each gene.  
 }
 
   \item{num.genes.detected}{

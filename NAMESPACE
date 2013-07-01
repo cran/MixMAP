@@ -1,4 +1,2 @@
-exportPattern("^[[:alpha:]]+")
+export(MixMAP)
 import(lme4)
-
-

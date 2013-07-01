@@ -28,7 +28,7 @@ Maintainer: Gregory J. Matthews <gjm112@gmail.com>
 
 }
 \references{
-Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  ``Mixed modeling of Meta-Analysis P-values (MixMAP) suggests multiple novel gene loci for low density lipoprotein cholesterol." Under Review; Available upon request. %%PLOS one.  
+Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) ``Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812.
 }
 
 \keyword{ package }
@@ -36,12 +36,14 @@ Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  ``Mixed modeli
 \code{\link{lme4-package}}
 }
 \examples{
-library(MixMAP)	
+library(MixMAP)  
 #Load data
-#This data has been prepared to be used as input to the MixMAp function
+#This data has been prepared to be used as input to the MixMAP function directly
 data(MixMAP_example)
+str(MixMAP_example)
 #Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",chr="Chr",bp="Coordinate",gene="Gene",use.post.var=TRUE)
+MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+  chr="Chr",coord="Coordinate",gene="Gene")
 #Display first ten detected genes
 summary(MixOut)
 #MixManhattan Plot

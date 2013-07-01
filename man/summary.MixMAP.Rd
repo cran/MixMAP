@@ -24,7 +24,7 @@ This method returns up to the top ten detected genes as well as information on t
 Returns a summary of the MixMAP object.
 }
 \references{
-Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  ``Mixed modeling of Meta-Analysis P-values (MixMAP) suggests multiple novel gene loci for low density lipoprotein cholesterol."" Under Review; Available upon requet.
+Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) ``Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812. 
 }
 \author{
 Gregory J. Matthews
@@ -32,7 +32,9 @@ Gregory J. Matthews
 
 \examples{
 data(MixMAP_example)
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",,chr="Chr",bp="Coordinate",gene="Gene",use.post.var=TRUE)
+#Run MixMAP
+MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+  chr="Chr",coord="Coordinate",gene="Gene")
 summary(MixOut)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

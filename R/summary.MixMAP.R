@@ -11,8 +11,8 @@ setMethod("summary",
            
            #If any genes were detected, print up to ten of them
            if (object@num.genes.detected[1]>0){
-           tmp<-object@detected.genes[order(object@detected.genes$pred.upper),c(1,2,5,10)]
-           tmp<-tmp[order(tmp$post.est),]
+           tmp<-object@detected.genes[order(object@detected.genes$predUpper),c(1,2,5,8,9,10)]
+           tmp<-tmp[order(tmp$postEst),]
            print(as.data.frame(tmp[1:min(10,dim(tmp)[1]),]))
            }
            
