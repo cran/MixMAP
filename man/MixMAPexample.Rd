@@ -44,8 +44,9 @@ library(MixMAP)
 #This data has been prepared to be used as input to the MixMAP function directly
 data(MixMAP_example)
 str(MixMAP_example)
-#Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+
+#Run mixmapTest
+MixOut<-mixmapTest(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
   chr="Chr",coord="Coordinate",gene="Gene")
 #Display first ten detected genes
 summary(MixOut)

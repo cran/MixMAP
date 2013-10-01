@@ -1,14 +1,14 @@
-\name{MixMAP}
-\alias{MixMAP}
+\name{mixmapTest}
+\alias{mixmapTest}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{MixMAP
-MixMAP
+\title{mixmapTest
+mixmapTest
 }
 \description{
 This function implements the MixMAP algorithm, which performs gene-level tests of association using data from a previous GWAS or data from a meta-analysis of several GWAS.  Conceptually, genes are detected as significant if the collection of p-values within a gene are determined to be collectively smaller than would be observed by chance.  
 }
 \usage{
-MixMAP(data.set, pval="pval", snp="snp", gene="gene",
+mixmapTest(data.set, pval="pval", snp="snp", gene="gene",
   coord="coord", chr="chr", alpha = 0.05)
 }
 %- maybe also 'usage' for other objects documented here.
@@ -50,7 +50,7 @@ If the user only has SNP names and p-values, gene name must be appended to the f
 \value{
 An object of class 'MixMAP'.
 %%  If it is a LIST, use
-  \item{output}{data.frame with a row for each gene containing gene symbol, posterior estimates for all gene level effects, variance used in intervals, upper bound of one sided interval, the number of SNPs in each gene, the chromsome of the SNP, the location coordinate of the SNP, the gene-level p-value, and the adjusted gene-level p-value.}
+  \item{output}{data.frame with a row for each gene containing gene symbol, posterior estimates for all gene level effects, variance used in intervals, upper bound of one sided interval, the number of SNPs in each gene, the chromsome of the SNP, the location coordinate of the SNP, the gene-level p-value, the Bonferroni adjusted gene-level p-value, and the q-value based on Banjamini-Hochberg fasle discovery rate.}
  \item{num.genes.detected }{A vector containing the number of SNPs detected and the total number of genes}
   \item{detected.genes }{data.frame with a row for each gene containing gene symbol, posterior estimates for all gene level effects, variance used in intervals, upper bound of one sided interval, the number of SNPs in each gene, the chromsome of the SNP, the location coordinate of the SNP, the gene-level p-value, the adjusted gene-level p-value, the name of the SNP with the smallest p-value, the minimum p-value in the gene, and a 5 number summary of the p-values within each gene}
    \item{lmer.out }{A mer object containing all of the model output information, including parameter estimates, from the lmer function.}
@@ -70,7 +70,7 @@ library(MixMAP)
 #This data has been prepared to be used as input to the MixMAP function
 data(MixMAP_example)
 #Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+MixOut<-mixmapTest(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
   chr="Chr",coord="Coordinate",gene="Gene")
 #Display first ten detected genes
 summary(MixOut)

@@ -32,10 +32,15 @@ Gregory J. Matthews
 
 \examples{
 data(MixMAP_example)
-#Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+#Run mixmapTest
+MixOut<-mixmapTest(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
   chr="Chr",coord="Coordinate",gene="Gene")
 summary(MixOut)
+
+#Run mixmapPI
+MixOutPI<-mixmapPI(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+  chr="Chr",coord="Coordinate",gene="Gene")
+summary(MixOutPI)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

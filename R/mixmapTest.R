@@ -1,5 +1,5 @@
 
-MixMAP <-
+mixmapTest <-
 function(data.set,pval="pval",snp="snp",gene="gene",coord="coord",chr="chr",alpha=0.05){
 ############################
 #defining errors
@@ -75,7 +75,8 @@ out[[chr]]<-as.numeric(as.character(out[[chr]]))
 
 #Calculate the gene level p-value
 out$MixMAP_pvalue<-pnorm(out$postEst/sqrt(out$var))
-out$MixMAP_pvalue_adj<-p.adjust(out$MixMAP_pvalue,method="BH")
+out$MixMAP_pvalue_BonferroniAdjusted<-dim(out)[1]*pnorm(out$postEst/sqrt(out$var))
+out$MixMAP_qvalue<-p.adjust(out$MixMAP_pvalue,method="BH")
 
 
 cutoff<-0
