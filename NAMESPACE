@@ -1,2 +1,4 @@
 export(MixMAP)
+exportMethods(plot)
 import(lme4)
+import(utils)

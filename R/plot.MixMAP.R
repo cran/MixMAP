@@ -1,7 +1,7 @@
 #Plot method
 setMethod("plot",
     signature(x = "MixMAP"),
-   function(x,col.genes=c("gray","black"),col.detected=c("blue","purple"),col.text="black",title="MixMAP Manhattan Plot",display.text=TRUE){
+   function(x,col.genes=c("black","gray"),col.detected=c("blue","violet"),col.text="black",title="MixMAP Manhattan Plot",display.text=TRUE){
 ############################
 #defining errors
 ############################

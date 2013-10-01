@@ -44,7 +44,7 @@ datTemp$probit.rank.transform<-qnorm((rank(datTemp$pvalTemp)-0.5)/length(datTemp
 
 #Run lmer function
 fm.rawg=lmer(probit.rank.transform ~ 1+(1|geneTemp),data=datTemp)
-aa=ranef(fm.rawg,postVar=TRUE)
+aa=ranef(fm.rawg)
 beta<-fixef(fm.rawg)
 post.est=aa$geneTemp[,1,]
 #post.var=attr(aa$gene.temp,"postVar")[1,1,]

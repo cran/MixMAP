@@ -8,7 +8,7 @@ MixMAP
 This function implements the MixMAP algorithm, which performs gene-level tests of association using data from a previous GWAS or data from a meta-analysis of several GWAS.  Conceptually, genes are detected as significant if the collection of p-values within a gene are determined to be collectively smaller than would be observed by chance.  
 }
 \usage{
-MixMAP(data.set, pval="pval", snp="snp", gene="gene", 
+MixMAP(data.set, pval="pval", snp="snp", gene="gene",
   coord="coord", chr="chr", alpha = 0.05)
 }
 %- maybe also 'usage' for other objects documented here.

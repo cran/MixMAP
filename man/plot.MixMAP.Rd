@@ -9,13 +9,12 @@ Plot
 The purpose of plot is to graphically display the results of MixMAP in a similar way as a Manhattan plot that is used for Genome Wide Association Studies.    
 }
 \usage{
-\S4method{plot}{MixMAP}(mixmap.object,col.genes=c("black","gray"),
-  col.detected=c("blue","violet"),col.text="black",
-    main="MixMAP Manhattan Plot",display.text=TRUE)
+\S4method{plot}{MixMAP}(x,col.genes=c("black","gray"),col.detected=c("blue","violet"),
+  col.text="black",title="MixMAP Manhattan Plot",display.text=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{mixmap.object}{
+  \item{x}{
 An object of class mixmap, which is output from the function MixMAP.  
 }
   \item{col.genes}{
@@ -27,7 +26,7 @@ A character vector containing with the names of color to display genes detected 
   \item{col.text}{
 A character string with the name of a color to display text of the names of detected genes.  Default is black.
 }
-  \item{main}{
+  \item{title}{
 A character string used a title for the MixManhattan plot.  Default is "MixMAP Manhattan Plot".
 }
   \item{display.text}{
@@ -50,8 +49,8 @@ Gregory J. Matthews
 \examples{
 data(MixMAP_example)
 #Run MixMAP
-MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName"
-  ,chr="Chr",coord="Coordinate",gene="Gene")
+MixOut<-MixMAP(MixMAP_example,pval="GC.Pvalue",snp="MarkerName",
+  chr="Chr",coord="Coordinate",gene="Gene")
 plot(MixOut)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
