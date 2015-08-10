@@ -3,7 +3,7 @@
 \docType{methods}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Plot
+Method for creating a MixManhattan plot.
 }
 \description{
 The purpose of plot is to graphically display the results of MixMAP in a similar way as a Manhattan plot that is used for Genome Wide Association Studies.    
@@ -15,13 +15,13 @@ The purpose of plot is to graphically display the results of MixMAP in a similar
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-An object of class mixmap, which is output from the function MixMAP.  
+An object of class \code{MixMAP}, which is output from the function \code{MixMAP}.  
 }
   \item{col.genes}{
 A character vector containing colors for alternate chromosomes.  Default is black and gray.
 }
   \item{col.detected}{
-A character vector containing with the names of color to display genes detected by MixMAP.  Genes detected by MixMAP but not by single SNP analysis will be dispalyed using the first color.  Genes deteced in both MixMAP and single SNP analysis are displayed using the second colors.  Default is blue and violet.
+A character vector containing with the names of color to display genes detected by MixMAP algorithm.  Genes detected by MixMAP, but not by single SNP analysis will be dispalyed using the first color.  Genes deteced in both MixMAP and single SNP analysis are displayed using the second colors.  Default is blue and violet.
 }
   \item{col.text}{
 A character string with the name of a color to display text of the names of detected genes.  Default is black.
@@ -30,7 +30,7 @@ A character string with the name of a color to display text of the names of dete
 A character string used a title for the MixManhattan plot.  Default is "MixMAP Manhattan Plot".
 }
   \item{display.text}{
-Either TRUE or FALSE.  FALSE will not label detected genes; TRUE will add text.  Default is TRUE.  
+Either \code{TRUE} or \code{FALSE}.  \code{FALSE} will not label detected genes; \code{TRUE} will add text.  Default is \code{TRUE}.  
 }
 }
 \details{
@@ -41,6 +41,8 @@ Returns a MixManhattan plot.
 }
 \references{
 Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) ``Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812.   
+
+Matthews, G.J. and Foulkes, A.S. (2015) ``{MixMAP}: An {R} Package for Mixed Modeling of Meta-Analysis $p$ Values in Genetic Association Studies." Journal of Statistical Software.  66(3): 1-11.
 }
 \author{
 Gregory J. Matthews

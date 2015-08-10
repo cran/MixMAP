@@ -1,4 +1,4 @@
-
+#I added a comment
 mixmapTest <-
 function(data.set,pval="pval",snp="snp",gene="gene",coord="coord",chr="chr",alpha=0.05){
 ############################
@@ -25,7 +25,10 @@ if (pval%in%names(data.set) & length(data.set[[pval]])!=length(data.set[[gene]])
 #are pvalues numeric?
 if (!is.numeric(data.set[[pval]])) stop(gettextf('p-values must be numeric'))
 if (sum(is.na(data.set[[pval]]))>0) stop(gettextf('Some p-values are missing'))
-if (sum(is.na(data.set[[gene]]))>0) stop(gettextf('Some gene names are missing'))
+if (sum(is.na(data.set[[gene]]))>0) {
+  data.dat <- data.set[!is.na(data.set[[gene]]),]
+  warning(gettextf('Some SNPs are missing gene names.  SNPs with a missing gene name have been removed from the analysis.'))
+      }
 
 ############################
 #Pull out the subset of data that will be used

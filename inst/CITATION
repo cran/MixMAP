@@ -1,0 +1,19 @@
+citHeader("To cite MixMAP in publications use:")
+
+citEntry(entry = "Article",
+  title        = "{MixMAP}: An {R} Package for Mixed Modeling of Meta-Analysis $p$ Values in Genetic Association Studies",
+  author       = personList(as.person("Gregory J. Matthews"),
+                   as.person("Andrea S. Foulkes")),
+  journal      = "Journal of Statistical Software, Code Snippets",
+  year         = "2015",
+  volume       = "66",
+  number       = "3",
+  pages        = "1--11",
+  url          = "http://www.jstatsoft.org/v66/c03/",
+
+  textVersion  =
+  paste("Gregory J. Matthews, Andrea S.  Foulkes (2015).",
+        "MixMAP: An R Package for Mixed Modeling of Meta-Analysis $p$ Values in Genetic Association Studies.",
+        "Journal of Statistical Software, Code Snippets, 66(3), 1-11.",
+        "URL http://www.jstatsoft.org/v66/c03/.")
+)

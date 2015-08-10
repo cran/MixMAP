@@ -1,7 +1,7 @@
 \name{MixMAP_example}
 \alias{MixMAP_example}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{MixMAP_example}
+\title{A working example of the MixMAP algorithm.}
 \description{
 Data containing the results of a meta-analysis consisting of many GWAS whose phenotype of interest is LDL cholesterol.  This file contains all of the information necessary to run the MixMAP function directly without any pre-processing.  
 }
@@ -33,6 +33,8 @@ The p-values in this file are from the paper Teslovich Et Al. (2009) ``Biologica
 
 \references{
 Foulkes, A.S., Matthews, G.J., Das, U., Ferguson, J., Reilly, M.  (2013) ``Mixed Modeling of Meta-Analysis P-Values (MixMAP) Suggests Multiple Novel Gene Loci for Low Density Lipoprotein Cholesterol". PLoS ONE 8(2): e54812.
+
+Matthews, G.J. and Foulkes, A.S. (2015) ``{MixMAP}: An {R} Package for Mixed Modeling of Meta-Analysis $p$ Values in Genetic Association Studies." Journal of Statistical Software.  66(3): 1-11.
 
 }
 %% ~Make other sections like Warning with \section{Warning }{....} ~

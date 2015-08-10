@@ -5,26 +5,26 @@
 MixMAP-class
 }
 \description{
-Objects of class MixMAP are returned as output from the function MixMAP.  
+Objects of class \code{MixMAP} are returned as output from the function \code{MixMAP}.  
 }
 \arguments{
 %- maybe also 'usage' for other objects documented here.
 
   \item{output}{
-A data.frame containing posterior estimates for all genes, as well as other associated gene level information.  
+A \code{data.frame} containing posterior estimates for all genes, as well as other associated gene level information.  
 }
   \item{num.genes.detected}{
 A numeric vector containing the number of genes detected and the total number of genes.    
 }
   \item{detected.genes}{
-A data.frame containing information on the detected genes.  This includes the posterior estimate, variance, and upper bound of the prediction interval fo all genes.  Other gene level information that is included is the gene location including chromosome and base pair along with the total number of SNPs within each gene (snpCount), and some summary information regarding the SNP p-values within each gene.  
+A \code{data.frame} containing information on the detected genes.  This includes the posterior estimate, variance, and upper bound of the prediction interval fo all genes.  Other gene level information that is included is the gene location including chromosome and base pair along with the total number of SNPs within each gene (snpCount), and some summary information regarding the SNP p-values within each gene.  
 }
 
   \item{num.genes.detected}{
 A numeric vector containing the number of genes detected and the total number of genes.    
 }
 
-   \item{lmer.out }{A mer object containing all of the model output information, including parameter estimates, from the lmer function.}
+   \item{lmer.out}{A \code{mer} object containing all of the model output information, including parameter estimates, from the \code{lmer} function.}
 
 	}
 	
